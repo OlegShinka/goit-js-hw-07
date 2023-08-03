@@ -24,8 +24,6 @@ function markupGallery(arr) {
     .join("");
 }
 
-markupGallery(galleryItems);
-
 refs.ulEl.insertAdjacentHTML("beforeend", markupGallery(galleryItems));
 
 refs.ulEl.addEventListener("click", onImgClick);
@@ -48,5 +46,5 @@ function onImgClick(evt) {
     )
     .show();
 
-  //   instance.show();
+  instance.show();
 }
