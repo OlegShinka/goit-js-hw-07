@@ -35,16 +35,16 @@ function onImgClick(evt) {
   } //gard close
 
   const origImg = evt.target.dataset.source; //значення дата-атрибуту
+  const altImg = evt.target.alt;
 
+  //   console.log(altImg);
   const instance = basicLightbox
     .create(
       `
       <div class="modal">
-          // <img width="1280" height="700" src="${origImg}"/>
+          // <img width="1280" height="700" alt="${altImg}" src="${origImg}"/>
       </div>
-  `
+//   `
     )
     .show();
-
-  instance.show();
 }
