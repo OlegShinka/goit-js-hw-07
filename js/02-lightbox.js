@@ -23,12 +23,11 @@ refs.ulEl.insertAdjacentHTML("beforeend", markupGallery(galleryItems));
 
 refs.ulEl.addEventListener("click", onClickImg);
 
-let lightbox; // змінна для ініціалізації бібліотеки
+new SimpleLightbox(".gallery__item a", {
+  captionsData: "alt",
+  captionDelay: 250,
+}); //ініціалізація бібліотеки
+
 function onClickImg(evt) {
   evt.preventDefault();
-
-  lightbox = new SimpleLightbox(".gallery__item a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  }); //ініціалізації бібліотеки
 }

@@ -38,13 +38,10 @@ function onImgClick(evt) {
   const altImg = evt.target.alt;
 
   //   console.log(altImg);
-  const instance = basicLightbox
-    .create(
-      `
-      <div class="modal">
-          // <img width="1280" height="700" alt="${altImg}" src="${origImg}"/>
-      </div>
-//   `
-    )
-    .show();
+  const instance = basicLightbox.create(
+    `
+           <img width="1280" height="700" alt="${altImg}" src="${origImg}"/>
+     `
+  );
+  instance.show();
 }
